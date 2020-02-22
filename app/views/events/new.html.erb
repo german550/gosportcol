@@ -1,0 +1,12 @@
+<section class = "forms text-center">
+  <p class="h4 mb-4">Create a Sport Event</p>
+    <%= form_with model: @events do |f| %>
+    <div> Place: <%= f.text_field :place,required: true, class:"form-control mb-4"  %> </div>
+    <div> Date: <%= f.date_field :date, required: true, class:"form-control mb-4" %> </div>
+    <div> Time: <%= f.time_field :time, required: true, class:"form-control mb-4"  %> </div>
+    <div> Price: <%= f.text_field :price, required: true, class:"form-control mb-4"  %> </div>
+    <div> Description: <%= f.text_field :description,required: true, class:"form-control mb-4"  %> </div>
+    <div> Image: <%= f.file_field :pic, required: true, class:"form-control mb-4" %> </div>
+    <p><div><button class = "btn btn-info btn-block" type="submit">Create</button></div></p>
+    <%end%>
+</section>
