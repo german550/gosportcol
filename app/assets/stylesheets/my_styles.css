@@ -1,10 +1,38 @@
+body{
+	background: rgb(237, 237, 237);
+	margin: 0;
+}
+.card{
+width: 25rem;
+margin: auto;
+border-radius: 10px;
+display: block;
+}
+
+.card-deck{
+  width: 30rem;
+  margin: auto;
+}
+.top{
+	margin-top: 100px;
+}
+
+.container_login-container{
+	margin-left: 20px;
+}
 .my_pic{
-width: 300px;
-height: 300px;
+width: 50px;
+height: 50px;
 display: block;
 margin-left: auto;
 margin-right: auto;
 width: 45%;
+}
+.header_image{
+ border-radius: 10px;
+ margin-top: -50px;
+ width: 100%;
+ height: 650px;
 }
 
 .post_text{
@@ -12,4 +40,33 @@ width: 45%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card-img-top{
+border-radius: 10px;
+height: 300px;
+}
+
+.forms{
+	width: 300%;
+	max-width: 600px;
+	padding: 15px;
+	margin: auto;
+	margin-top: 60px;
+	border-style: solid;
+  border-color: grey;
+	border-width: 0.5px;
+}
+
+.alert{
+	position: absolute;
+}
+
+.d-flex{
+	display: grid;
+	flex-wrap: wrap;
+}
+
+.jumbotron{
+	background: rgb(224, 224, 224);
 }

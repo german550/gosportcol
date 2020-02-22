@@ -1,0 +1,8 @@
+<section class = "forms text-center">
+    <p class="h4 mb-4">Complete your reservation for: </p> <p class = "h4 mb-4"> <b><%= @event.place %> </b></p>
+    <%=image_tag  @event.pic, :size => '520x360' %>
+    <%= form_with model: [@event, @registration] do |f| %>
+      <div> Register: <%= f.check_box :registered,required: true, class:"form-control mb-4"  %> </div>
+      <p><div><button class = "btn btn-info btn-block" type="submit">Book</button></div></p>
+    <%end%>
+</section>
