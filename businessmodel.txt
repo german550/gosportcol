@@ -10,3 +10,22 @@ Use this file to type the app idea
     - Creacion de eventos deportivos por usuarios con requisitos especificos para calificar para patrocinio/beneficios adicionales.
     
     
+    Tables: 
+    Users: 
+      Name
+      Age:
+      mail:
+      deportes:
+      Experiencia:
+      Friends
+      
+   Groups:
+      users
+   Events
+      groups
+      users
+
+
+      
+   
+    
