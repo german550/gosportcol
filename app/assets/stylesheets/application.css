@@ -29,3 +29,8 @@ header{
 .brand_title {
     text-align: center;
 }
+
+.about-par{
+    font-weight: bold;
+    font-size: large;
+}
