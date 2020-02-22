@@ -1,4 +1,11 @@
 <header>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+    </a>
+    </nav>
     <h1 class="mainTitle">SportsLiveBogota</h1>
     <h2>Welcome to Bogota's Sports Events<h2>
     <button>Register Brand</button>
@@ -10,28 +17,17 @@
     <div class="card-deck">
   <div class="card"  > 
     <%= image_tag("biking/biking_bogota.jpeg", class: 'card-img-top') %>
-    <div class="card-body">
-      <h5 class="card-title">Biking in Bogotá</h5>
-      <p class="card-text">The popular biking brand is hosting a round trip in the north of Bogota</p>
-      <p class="card-text"><small class="text-muted">Saturday 9am</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <%= image_tag("athletics/maraton.jpg", class: 'card-img-top') %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <%= image_tag("biking/biking_bogota.jpeg", class: 'card-img-top') %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+    <div class="card">
+    <% @events.each do |event|%>
+        <%= image_tag("athletics/maraton.jpg", class: 'card-img-top') %>
+        <div class="card-body">
+        <h5 class="card-title"><%= event.title %></h5>
+        precio lugar descripcion user id
+        fecha hora
+        <p class="card-text"> </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    <% end %>
 </div>
 </section>
 <section>
