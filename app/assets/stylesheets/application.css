@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+header{
+    background: #b84646;
+}
+
+.mainTitle{
+    text-align: center;
+}
+
+.card-image{
+    width: 300px;
+}
+
+.brand_title {
+    text-align: center;
+}
