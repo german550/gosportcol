@@ -1,6 +1,6 @@
 <section class = "forms text-center">
   <p class="h4 mb-4">Create a Sport Event</p>
-    <%= form_with model: @events do |f| %>
+    <%= form_with model: @event do |f| %>
     <div> Place: <%= f.text_field :place,required: true, class:"form-control mb-4"  %> </div>
     <div> Date: <%= f.date_field :date, required: true, class:"form-control mb-4" %> </div>
     <div> Time: <%= f.time_field :time, required: true, class:"form-control mb-4"  %> </div>

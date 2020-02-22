@@ -8,7 +8,7 @@ def new
 end
 
 def create
-    @events = Event.new(event_params)
+    @event = Event.new(event_params)
     @event.user_id = current_user.id
       if @event.save
         redirect_to @event
@@ -42,21 +42,21 @@ def destroy
   end
   def update
     @event = Event.find(params[:id])
+    @event.update(event_params)
     if current_user == @event.user
-      @event.update(event_params)
-      redirect_to "/events/#{@event.id}/edit"
-      flash[:notice] = "Event Succesfully Updated"
-    else
-      redirect_back(fallback_location: root_path)
-      flash[:alert] = "Not authorized to edit this Event"
-    end
+        @event.update(event_params)
+        redirect_to "/events/#{@event.id}/edit"
+        flash[:notice] = "Event Succesfully Updated"
+      else
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "Not authorized to edit this event"
+      end
   end
 
-
-private
-def event_params
-  params.require(:events).permit(:place, :pic, :address, :date, :time, :price, :description)
-end
+  private
+  def event_params
+    params.require(:event).permit(:place,:pic,:address,:date, :time, :price, :description)
+  end
 
 
 end

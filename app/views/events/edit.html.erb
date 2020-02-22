@@ -1,4 +1,4 @@
-<a class = "top" <%= form_for @event do |f| %>
+<%= form_for @event do |f| %>
       <%= image_tag @event.pic, class: "my_pic" %>
       <div class = "post_text"> <b> Edit Sport Event</b>
         <div> Place: <%= f.text_field :place,required: true, class:"form-control mb-4"  %> </div>
@@ -7,7 +7,7 @@
         <div> Price: <%= f.text_field :price, required: true, class:"form-control mb-4"  %> </div>
         <div> Description: <%= f.text_field :description,required: true, class:"form-control mb-4"  %> </div>
         <div> Image: <%= f.file_field :pic, required: true, class:"form-control mb-4" %> </div>
-      <%= button_to "Update", @event, method: :patch%>
+      <%= f.submit%>
   <%end%>
 
 <%= button_to "Delete", @event, method: :delete, data:{confirm: "Are you sure?"}%>
