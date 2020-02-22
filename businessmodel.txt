@@ -1,0 +1,12 @@
+Use this file to type the app idea
+
+
+   Usuarios deportistas
+    
+    Funcionalidad:
+    - Creacion de perfil de usuarios
+    - Agregar contactos con perfiles similares.
+    - Creacion de eventos deportivos patrocinados por empresas.
+    - Creacion de eventos deportivos por usuarios con requisitos especificos para calificar para patrocinio/beneficios adicionales.
+    
+    
