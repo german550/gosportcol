@@ -25,3 +25,7 @@ header{
 .card-image{
     width: 300px;
 }
+
+.brand_title {
+    text-align: center;
+}
