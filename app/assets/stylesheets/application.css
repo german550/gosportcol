@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+header{
+    background: #b84646;
+}
+
+.mainTitle{
+    text-align: center;
+}
