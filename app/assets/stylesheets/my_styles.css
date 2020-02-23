@@ -7,8 +7,8 @@ width: 25rem;
 margin: auto;
 border-radius: 10px;
 display: block;
+margin-top: 30px;
 }
-
 .card-deck{
   width: 30rem;
   margin: auto;
@@ -52,7 +52,7 @@ height: 300px;
 	max-width: 600px;
 	padding: 15px;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 120px;
 	border-style: solid;
   border-color: grey;
 	border-width: 0.5px;
@@ -69,4 +69,10 @@ height: 300px;
 
 .jumbotron{
 	background: rgb(224, 224, 224);
+	margin-top: 30px;
+}
+
+.d-block{
+	height: auto;
+	width: 500px;
 }

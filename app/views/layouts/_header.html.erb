@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+
+ <!-- Brand -->
+ <%= link_to image_tag("logo.png", alt: "logo", size:"75x75"), '/' %>
+
+ <!-- Links -->
+ <ul class="navbar-nav">
+   <li class="nav-item">
+     <a class="nav-link" href="/events/">Home</a>
+   </li>
+ <li class="nav-item">
+     <a class="nav-link" href="/events/new">Create Sport Event</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="/about/">About Us</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="/pages/">Your Brand</a>
+   </li>
+   <!-- Log Out -->
+    <li class="nav-item">
+     <a class = "nav-link" <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    </li>
+
+  </ul>
+  </nav>
