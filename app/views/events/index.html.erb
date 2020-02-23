@@ -7,7 +7,7 @@
   <div class="d-flex justify-content-center">
     <%= image_tag("logo.png", width: "100", height: "100", class: "d-inline-block align-top") %>
     <div>
-    <h1 class="display-3">Welcome to Bogota Sports Events</h1>
+    <h1 class="display-3">Welcome to GoSports Bogota</h1>
     <p> Find your favorite local sports events.</p>
     <p><a class="btn btn-primary btn-lg" href="/events/" role="button"> View All Events»</a></p>
     </div>
@@ -24,9 +24,9 @@
         <%= image_tag e.pic, class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title"><%= e.place %></h5>
-          <p class="card-text"><%= e.date %></p>
+          <p class="card-text"><%= "#{e.date.strftime("%B %d %Y")}"%></p>
           <p class="card-text"><%= e.time %></p>
-          <p class="card-text"><%= e.price %></p>
+          <p class="card-text">$<%= e.price %></p>
           <p class="card-text"><%= e.description %></p>
           <%=e.registrations.where(registered: true).count  %> users registered</p>
           <%= button_to "Sign Up", "/events/#{e.id}/registrations/new", :method => "get", class: "btn btn-primary" %>
