@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <div class="d-flex justify-content-center">
+    <div><h1>My Events</h1></div>
+  </div>
+</div>
+
+
+  <div class = "card-text text-center"><h3> Events Created</h3></div>
+  <div class = "container-fluid">
+    <div class="row mb-3 shadow-lg">
+      <div class="col-3 themed-grid-col text-center "> <h6><b> Place </b></h6></div>
+      <div class="col-3 themed-grid-col text-center "><h6><b> Description</b></h6> </div>
+      <div class="col-3 themed-grid-col text-center "><h6><b> Date </b></h6></div>
+      <div class="col-3 themed-grid-col text-center "><h6><b> Time </b></h6></div>
+      <p><% @myevents.each do |e| %> </p>
+          <div class="col-3 themed-grid-col text-center "><%= " #{e.place}" %> </div>
+          <div class="col-3 themed-grid-col text-center "><%= " #{e.description}" %> </div>
+          <div class="col-3 themed-grid-col text-center "><%= " #{e.date}" %> </div>
+          <div class="col-3 themed-grid-col text-center "><%= " #{e.time}" %> </div>
+      <%end%>
+    </div>
+
+<div class = "card-text text-center"><h3> Registered Events</h3></div>
+<div class = "container-fluid">
+  <div class="row mb-3 shadow-lg">
+    <div class="col-6 themed-grid-col text-center "> <h6><b> Event ID </b></h6></div>
+    <div class="col-6 themed-grid-col text-center "><h6><b> User ID</b></h6> </div>
+
+    <p><% @myregistrations.each do |r| %> </p>
+        <div class="col-6 themed-grid-col text-center "><%= " #{r.event_id}" %> </div>
+        <div class="col-6 themed-grid-col text-center "><%= " #{r.user_id}" %> </div>
+    <%end%>
+  </div>
+
+
