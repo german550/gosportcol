@@ -76,3 +76,8 @@ height: 300px;
 	height: auto;
 	width: 500px;
 }
+
+.center{
+	margin:auto;
+	display: block;
+}
