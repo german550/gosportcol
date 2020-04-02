@@ -15,18 +15,18 @@
         <div class = "container-fluid">
             <div class="row mb-3 shadow">
                 <div class="col-2 themed-grid-col text-center "> <h6><b>Place</b></h6></div>
-                <div class="col-4 themed-grid-col text-center "><h6><b>Description</b></h6></div>
+                <div class="col-3 themed-grid-col text-center "><h6><b>Description</b></h6></div>
                 <div class="col-2 themed-grid-col text-center "><h6><b>Date</b></h6></div>
                 <div class="col-2 themed-grid-col text-center "><h6><b>Time</b></h6></div>
-                <div class="col-2 themed-grid-col text-center "><h6><b>Registered E-mail</b></h6></div>
+                <div class="col-3 themed-grid-col text-center "><h6><b>Registered E-mail</b></h6></div>
             
                 <% @myregistrations.each do |r| %>
                     <%if @myregistrations != [] %>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.place}" %> </div>
-                <div class="col-4 themed-grid-col text-center "><%= " #{r.event.description}" %> </div>
+                <div class="col-3 themed-grid-col text-center "><%= " #{r.event.description}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.date}" %> </div>
-                <div class="col-2 themed-grid-col text-center "><%= " #{r.event.time}" %> </div>
-                <div class="col-2 themed-grid-col text-center "><%= " #{r.user.email}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{r.event.time.strftime("%H:%M %p")}" %> </div>
+                <div class="col-3 themed-grid-col text-center "><%= " #{r.user.email}" %> </div>
                     <%end%>
                 <%end%>
             </div>
@@ -36,15 +36,25 @@
             <h6 class="border-bottom border-gray pb-2 mb-2 mt-5">Events Created</h6>
         <div class = "container-fluid">
             <div class="row mb-3 shadow">
-                <div class="col-3 themed-grid-col text-center "> <h6><b>Place</b></h6></div>
-                <div class="col-3 themed-grid-col text-center "><h6><b>Description</b></h6></div>
-                <div class="col-3 themed-grid-col text-center "><h6><b>Date</b></h6></div>
-                <div class="col-3 themed-grid-col text-center "><h6><b>Time</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "> <h6><b>Place</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Description</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Date</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Time</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b> Users Registered</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Edit/Delete</b></h6></div>
                 <p><% @myevents.each do |e| %> </p>
-                <div class="col-3 themed-grid-col text-center "><%= " #{e.place}" %> </div>
-                <div class="col-3 themed-grid-col text-center "><%= " #{e.description}" %> </div>
-                <div class="col-3 themed-grid-col text-center "><%= " #{e.date}" %> </div>
-                <div class="col-3 themed-grid-col text-center "><%= " #{e.time}" %> </div
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.place}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.description}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.date}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.time.strftime("%H:%M %p")}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.registrations.where(registered: true).count}"  %> </div>
+                <div class="col-2 themed-grid-col text-center "> 
+                    <div class = "container-edit">
+                    <%= button_to "Edit", "/events/#{e.id}/edit", method: :get %>
+                    <%= button_to "Delete", "/events/#{e.id}" , method: :delete, data:{confirm: "Are you sure?"}%> 
+                    <div> 
+                </div>
+                
                 <%end%>
             </div>
         </div>
