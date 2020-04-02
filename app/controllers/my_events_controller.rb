@@ -4,5 +4,4 @@ class MyEventsController < ApplicationController
         @myregistrations = current_user.registrations.all
         @myevents = current_user.events.all
     end
-      
 end

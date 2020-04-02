@@ -81,3 +81,14 @@ height: 300px;
 	margin:auto;
 	display: block;
 }
+
+.container{
+	display: flex;
+	margin:auto;
+	margin-top: 150px;
+}
+
+.container-edit{
+	display: inline-flex;
+	margin:auto;
+}
