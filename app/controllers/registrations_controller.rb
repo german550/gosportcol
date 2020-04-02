@@ -20,7 +20,9 @@ class RegistrationsController < ApplicationController
      flash[:alert] = "Registration Failed"
     end
   end
-
+  def show
+    @registration = Registration.find(params[:id])
+  end
 
   private
   def registration_params
