@@ -39,7 +39,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= e.place %></h5>
           <p class="card-text"><%= "#{e.date.strftime("%B %d %Y")}"%></p>
-          <p class="card-text"><%= e.time %></p>
+          <p class="card-text"><%= e.time.strftime("%H:%M %p") %></p>
           <p class="card-text">$<%= e.price %></p>
           <p class="card-text"><%= e.description %></p>
           <%=e.registrations.where(registered: true).count  %> users registered</p>
