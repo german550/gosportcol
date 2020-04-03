@@ -21,6 +21,7 @@ class RegistrationsController < ApplicationController
     end
   end
   def edit
+    @event = Event.find(params[:event_id])
     @registration = Registration.find(params[:id])
     if current_user != @registration.user
       sign_out current_user
@@ -29,6 +30,7 @@ class RegistrationsController < ApplicationController
     end
   end
   def update
+    @event = Event.find(params[:event_id])
     @registration = Registration.find(params[:id])
     @registration.update(registration_params)
     if current_user == @registration.user
