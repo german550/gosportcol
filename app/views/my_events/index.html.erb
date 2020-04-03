@@ -27,9 +27,9 @@
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.description}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.date}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.time.strftime("%H:%M %p")}" %> </div>
-                <div class="col-2 themed-grid-col text-center "><%= " #{r.user.email}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{r.id}" %> </div>
                 <div class="col-2 themed-grid-col text-center ">  
-                <%=form_with url: edit_event_registration_path, :method => :put do |f|%>  
+                <%=form_with url: my_events_path, :method => :put do |f|%>  
                     <div><%= f.hidden_field :registered, :value => false, class:"form-control mb-4"  %> </div>
                     <p><div><button class = "btn btn-info btn-block" type="submit">Unregister</button></div></p>
                 <%end%>

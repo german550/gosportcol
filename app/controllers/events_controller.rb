@@ -55,7 +55,7 @@ def destroy
 
   private
   def event_params
-    params.require(:event).permit(:place,:pic,:address,:date, :time, :price, :description)
+    params.require(:event).permit(:id, :place,:pic,:address,:date, :time, :price, :description)
   end
 
 
