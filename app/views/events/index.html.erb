@@ -42,7 +42,7 @@
           <p class="card-text"><%= e.time.strftime("%H:%M %p") %></p>
           <p class="card-text">$<%= e.price %></p>
           <p class="card-text"><%= e.description %></p>
-          <%=e.registrations.where(registered: true).count  %> users registered</p>
+          <p><%=e.registrations.where(registered: true).count  %> users registered</p>
           <%= button_to "Sign Up", "/events/#{e.id}/registrations/new", :method => "get", class: "btn btn-primary" %>
         </div>
       </div>
