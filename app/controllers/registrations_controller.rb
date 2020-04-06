@@ -47,7 +47,6 @@ class RegistrationsController < ApplicationController
     @registration.destroy
     redirect_to "/my_events/"
     flash[:notice] = "Event Succesfully Updated"
-  end
 
   private
   def registration_params

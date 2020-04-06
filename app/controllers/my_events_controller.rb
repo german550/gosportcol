@@ -5,9 +5,6 @@ class MyEventsController < ApplicationController
         @myevents = current_user.events
     end
     
-
     def myregistrations_params
         params.require(:registration).permit(:registered)
       end
-
-end

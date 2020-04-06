@@ -1,0 +1,123 @@
+<<<<<<< HEAD
+
+<main role="main" class="container top 2em">
+<div class="jumbotron">
+    <div class = "center" > 
+    <h1 class="text-center">My Events</h1>
+    <%= image_tag "logo.png", class: "center" %> 
+    </div>
+  
+</div>
+
+<div class="media text-muted pt-3">
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <h6 class="border-bottom border-gray pb-2 mb-2">Registered Events</h6>
+        <div class = "container-fluid">
+            <div class="row mb-3 shadow">
+                <div class="col-2 themed-grid-col text-center "> <h6><b>Place</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Description</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Date</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Time</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Registered E-mail</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Unregister</b></h6></div>
+            
+                <% @myregistrations.each do |r| %>
+                    <%if @myregistrations != [] %>
+                    <div class="col-2 themed-grid-col text-center "><%= " #{r.event.place}" %> </div>
+                    <div class="col-2 themed-grid-col text-center "><%= " #{r.event.description}" %> </div>
+                    <div class="col-2 themed-grid-col text-center "><%= " #{r.event.date}" %> </div>
+                    <div class="col-2 themed-grid-col text-center "><%= " #{r.event.time.strftime("%H:%M %p")}" %> </div>
+                    <div class="col-2 themed-grid-col text-center "><%= " #{r.user.email}" %> </div>
+                    <div class="col-2 themed-grid-col text-center ">
+                    
+                    <%= form_with model: [r.event, r], method: :put, url: event_registration_unregister_path(r.event, r) do |f| %>
+                        <%= f.hidden_field :registered, value: false %>
+                        <p><div><button class = "btn btn-warning btn-block" type="submit">Unregister</button></div></p>
+                    <%end%>
+                    </div>
+                    <%end%>
+                <%end%>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">        
+            <h6 class="border-bottom border-gray pb-2 mb-2 mt-5">Events Created</h6>
+        <div class = "container-fluid">
+            <div class="row mb-3 shadow">
+                <div class="col-2 themed-grid-col text-center "> <h6><b>Place</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Description</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Date</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Time</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b> Users Registered</b></h6></div>
+                <div class="col-2 themed-grid-col text-center "><h6><b>Edit/Delete</b></h6></div>
+                <p><% @myevents.each do |e| %> </p>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.place}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.description}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.date}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.time.strftime("%H:%M %p")}" %> </div>
+                <div class="col-2 themed-grid-col text-center "><%= " #{e.registrations.where(registered: true).count}"  %> </div>
+                <div class="col-2 themed-grid-col text-center ">
+                
+                    <div class = "container-edit">
+                    <%= button_to "Edit", "/events/#{e.id}/edit", method: :get, class: "btn btn-info btn-block btn-sm mb-2" %>
+                    <%= button_to "Delete", "/events/#{e.id}" , class: "btn btn-info btn-block btn-sm ml-1 mb-2", method: :delete, data:{confirm: "Are you sure?"}%> 
+                    <div> 
+                </div>
+                
+                <%end%>
+            </div>
+        </div>
+    </div>
+ </div>   
+</main>
+
+
+
+  
+=======
+<main role="main">
+<div class="jumbotron">
+  <div class="d-flex justify-content-center">
+    <div><h1 class="display-3">My Events</h1>
+    <h2>Manage your events</h2>
+    <p></p>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class = "card-text text-center"><h3>Events Created</h3></div>
+        <div class = "container-fluid">
+        <div class="row mb-4 shadow-lg">
+            <div class="col-3 themed-grid-col text-center "> <h6><b> Event Name </b></h6></div>
+            <div class="col-3 themed-grid-col text-center "> <h6><b> Description</b></h6></div>
+            <div class="col-3 themed-grid-col text-center "><h6><b> Date</b></h6> </div>
+            <div class="col-3 themed-grid-col text-center "><h6><b> User</b></h6></div>
+
+                <p><% @myevents.each do |e| %> </p>
+                    
+                        <div class="col-3 themed-grid-col text-center "><%= " #{e.place}" %> </div>
+                        <div class="col-3 themed-grid-col text-center "><%= " #{e.description}" %> </div>
+                        <div class="col-3 themed-grid-col text-center "><%= "#{e.date}" %> </div>
+                        <div class="col-3 themed-grid-col text-center "><%= "#{e.user_id}"%> </div>
+                    <%end%>
+            
+                
+    </div>
+ 
+    <div class = "card-text text-center"><h3> Registered Events</h3></div>
+    <div class = "container-fluid">
+    <div class="row mb-4 shadow-lg">
+        <div class="col-6 themed-grid-col text-center "> <h6><b> Event Id </b></h6></div>
+        <div class="col-6 themed-grid-col text-center "><h6><b> User</b></h6> </div>
+    <p><% @myregistrations.each do |r| %> </p>
+        <div class="col-6 themed-grid-col text-center "><%= " #{r.event_id}" %> </div>
+        <div class="col-6 themed-grid-col text-center "><%= " #{r.user_id}" %> </div>
+    <%end%>
+    
+>>>>>>> master
