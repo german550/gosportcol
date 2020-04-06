@@ -76,3 +76,19 @@ height: 300px;
 	height: auto;
 	width: 500px;
 }
+
+.center{
+	margin:auto;
+	display: block;
+}
+
+.container{
+	display: flex;
+	margin:auto;
+	margin-top: 150px;
+}
+
+.container-edit{
+	display: inline-flex;
+	margin:auto;
+}

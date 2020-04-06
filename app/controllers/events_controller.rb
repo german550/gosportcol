@@ -25,7 +25,7 @@ def destroy
       event = Event.find(params[:id])
     if current_user == event.user
       event.destroy
-      redirect_to "/events"
+      redirect_to "/my_events"
       flash[:notice] = "Event Deleted"
     else
       redirect_back (fallback location: root_path)

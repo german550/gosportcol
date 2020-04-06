@@ -1,50 +1,149 @@
 <main role="main">
 <div class="jumbotron">
   <div class="d-flex justify-content-center">
-    <div><h1 class="display-3">Bogota's running shoes</h1>
-    <h2>Running everywhere in city</h2>
+    <div><h1 class="display-3">Bogota's sports stores</h1>
+    <h2>Training everywhere in city!</h2>
     <p></p>
     </div>
   </div>
 </div>
 
-
-<div class="card mb-3" style="max-width: 540px;">
+<div class="d-flex justify-content-center">
+<div class="row">
+<div class="card mb-3" style="max-width: 540px; margin: 50px">
   <div class="row no-gutters">
     <div class="col-md-4">
-<%= image_tag("athletics/nike_2.jpg", width: "100", height: "100", class: "card-img-top width: 500px") %>
+<%= image_tag(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASoAAACpCAMAAACrt4DfAAAAdVBMVEURERH///8AAAAODg4LCwsGBgbU1NTw8PCioqLr6+vj4+P6+voICAhJSUmnp6dFRUW0tLSSkpJSUlKCgoI2NjbDw8NxcXHY2NjPz89ra2sXFxd5eXkiIiL19fU9PT29vb1fX18nJyd/f3+Li4tcXFyQkJAvLy/l3P87AAACiklEQVR4nO3ZiZKqMBCFYdKAgCgK7svVcX3/R7wE3BBch6qh4P8eIGVOpTtNNAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaBir/CU7nfLXrADplpuVKSJRNC91zWoQ1zBLW0zHZAzWQWSXtmR1iBtKOSvpmKyfwPPdpdQyqa2SMg6VHefUDVtKTRZxYCUsWDkSqeDXh0ofp+Fg5Cil1j0pJfnqkY2vhr8qFh2TjPteHJNywrmUVMyVY4qn2t9vztRVt3fbKjEZ17TyEjJSX9dfJ46pF079NKek8sr9cZUiu3iP4y92qKvuuF07p5iUV+PKS0hPb3P1aavSzWnWb6uL1qzOlafpRhVbfrDLpDlF7kTd6K/qeuddSaB36s/fjcrSI8Hu0pxUeudJvSsvkZafUpt3okqa02LtqYzWuP4HSpNTGXVfnoqkOQVtdadf7zvvSn5OO37+BdhJv1f8+5yc0GpIUHFU51PyeATVzem4G+ViiqfN2t95Ny6HSqlFUVa6OS1P3yuNrbyUTK9bH95vXDenfb45JWo/bd6zlje796Ob56X0MWVaUHVa/afNHBlkS2ooZ8PB6F9xTM2YNnP0d3K2rkaB6wajSWFEp8qTWr5tvmCK8ziTh5XXuAOlWZvPgmrYnXfr/FHzFudgNDaoOKr9R5XXsDsvQ6L3cvL1nffXP/Zv2cN3gvJCo4l3XpYpD2eni2nDK+8sN1fda+S0Weh5s2rotPmArJ9WHgfq6vQfRA53Xp5tFjyyTLZUXoGOuNmcWocllVfMFOOQvkv5ztSdCbPBE/rxfLlaHZOHKs7TK5ZtW6QEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4MZ/CngV76LAlSkAAAAASUVORK5CYII=",
+ width: "100", height: "", class: "") %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <p class="card-text">Sports clothing for your trainings</p>
-        <p class="card-text"><small class="text-muted">Starting at $30.000</small></p>
+        <p class="card-text">Nike Sports store</p>
+        <p class="card-text"><small class="text-muted">Running shoes starting at $300.000</small></p>
+        <a href="https://www.nike.com/xl" class="card-text"><small class="text-muted">https://www.nike.com/xl</small></a>
       </div>
     </div>
   </div>
 </div>
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3" style="max-width: 540px; margin: 50px">
   <div class="row no-gutters">
     <div class="col-md-4">
-<%= image_tag("athletics/nike_3.jpg", width: "100", height: "100", class: "card-img-top") %>
+<%= image_tag(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASUAAACsCAMAAAAKcUrhAAAAhFBMVEX///8AAADR0dFOTk729vbW1tZSUlL8/PxkZGTp6emtra35+fmbm5vGxsa7u7v09PQvLy+KioohISHf399/f39qamoXFxfo6OhKSkoSEhKhoaFaWlo4ODjb29vAwMAJCQlCQkKOjo6xsbEpKSlycnJoaGg0NDSenp57e3sdHR2VlZU8PDyNzQzsAAAOiklEQVR4nO2d2YKiOhCGAWUTATEgArLTLvj+73eAhE1REwaQ7sN/Mz02SOXrLJWQqlDUoq8KbK5BTG8meJJK70+JzU7wpAHF88BOjjRUNMED1+hZwc/FpfgJHviP4iVJ9BKfrjUlpUKGYkrSjFFJa2A79IMmp5SLuwBVmuDBxFqrID09WvstSpl2oauuJ3g2gVTRTe8dpn6RUqZTyIrqBI/Hkmoy+rnbzu9SymuUzphzACWCdPfSyEzKBDa8ppQpDlnzu525CmThnYUTUZI+2HBU3K9VKAmw29ctbU6UaHqvMeAbfbnIRp+q0YwoZVrZjDmBLU0BWYtxTJsRJZo+XD0wXQ+1ZiMDz655UcrkbJhpeihRvjw52L+GUjbXS+XxG56p6G8H/q9Q4oks2l8jMKo5YnS9EVk0DSWK0CYr2YxXn9aevie0Z56Uso48UcZxDNZe+GKq9gsp0fRZU0box129a8b/eykVc7yBzVC3JOPa76CU+QWpOKgZZk875k2JpuVBvcx5UyLzBFqUBrVDPPxNSsM6TmLwNykN2y+p1zlT6t0v3YelJG3+JKVkYJfJ7WuIN6wd3eprnDLwQor5eVXyF1Iaetar6n+Q0mrYbikT8wcp2YPPeEG/adysKbmDG9J3lJsxpWTwBtd7lJsxpaGXBHKp4R+jJIyyXumSLubOnNIYValvzzTsrPuF+himj9Ar5XJXf4jSfrRtmN4forQZba+c2WNlYKb9kjPiKzmGfJlpip3MIrFVu1GruEz2YjdTOKY5SMSzp/246zl8RPreMhnVHqiI0CbrMvJeJnVLuAK+GteeQiGZSf5YTkAtU/c/29GQNbZBmQjfFRrjbqYo5BpkmCbYgEYGyRnH6X4Q+0OEafzum50hpMwqotp0Gt0eIi9OmAhS1uiuJF346E2OYBbuGxPGhwGNwCEY2xcg8AMO1+GXJ99I3BJgGndIkfAd3Vs48V5mdYNv3LvKxKumy8iKEkUbJDsT+jGKIkVmWCC+m5nir+fE9uh+0qN4D3tO53d1mCIrRxmRVE8ELjjvra4Bwbduu4ATEj3MwEUe0xVPImK/KLwr3wiZYxJc+7jmi2beZJTNJb06Adlk53Z3kvCyURizVVjs94TCJGs4zwI27lCnoTtEebPVEufea2240OHEGVq6qfZsR5hOibWdwOHulsRgzg1uCiWxUQZo9T4uYx+fgpXDHe+7/dvS748/epqHAbiYG2JX8jfjLsEGr9ncw8Q5Wy9/veOu6caTZYZhWNZ12exfWZajre68eVe64xLNwapKlj2pA/Asie27gQApFtJ8GDM7opF5VQQZMNvou5MD6cp+P9JZlPu8NCjkOzbjgk97iNaZrxAZvbuyQJ58/O8U6Pdy3FBcE7e34E1XJg7uKGR/rdd+lMRiOwWlApsVCbdYiSDiSB+TsHOKllfJuifOE/tYL4kyfmBeJp2dQ/x3UyoIX49hbTmy2nunnsr84DLSvhfS/EYSSHE4naN/M37tHT8/JKtH7vcHthcCnxtE8u+9qap9fMq479v+SWp6+lyZ/H9eUQUJRpWNr1MHfONJ1TFndX7yLwVQQ8xJsi/MxgeoxId4tkP1bnaqRrKWbMzDn6xkkzDKxfXpOACxW3YdvKT9JZMaX0gna3gSySJyre1IZSZV3z3OeQ+FW6OAjpkKo0OzGO56RztBna7Kms/U/eXZLyRZ6x12BnX8tnfJY26KOQTx7c34fTe2nrsuJBUqfgTeJQleLyD5h/iEWcOiryZgkjArkh9SkhcK993+ravjx6cjJxg/zvEev7/wFp84PRIpBhMTRzq1HpARi/u2yUF3mJHuBKfd/kC2IaMh6xafA65O4fnZDYfyR8qy8FHqFrdou5Z7BGRbSxwuOGWNEJeWX9BZOYZ+UdoTNOzFlDHiKT5LxJ6cd++tNPP3KVdDcLhjVr3i/e3QYuZb1m0fx+f7kXOcn0RPN3Jn8iSA7R8c3clbHc/ir+Me33/VGjBeZG9TTdeviWEIgvBjJMlV18KtvVGYTyu+uG2Ops/exK1u7RHkPBnXYVHx5yx7e1KfQLQJnLwPVemfFeKbYmkTrhSYOu6yZK6xfV+STF6T7KmEEonc7cPo9hCthU+1niKS7dIdf1pONtmepjaJREs8Y4WhNUWYwOOfFgExpaaECxjjm0RhvS6oNf6meJVkdMsVjG0RRRw7YGkjY5Ii0sWkn3ENKkQah3Lbjus3MYSVO6veo9qDrCI16jx0gpOWAP7crdRlRHNKkcfHcSNu++4TLD9FrvgesZbX8bomucfi80zzL1nRWC/IQZ9sjDOlRAcjtTn10sOY2VKiR3IH3F7bG2dL6TbKpAB/Afd3UBqnMoF+7w3nS8kaYdq7Jt4KMHdKdDi8B272SVs9b0q3wSsT32/HxKwp0YP7TL2Tn87U9y4kDN1/m722xcyc0uAhxWTR6L+Fkjfs0sC6l989e0rasKOcinUm06+jxA3bMYm9t6LNmpI1MKW+dsyb0sDdd/9zB+ZNadgYzL9Kadj1b9XoezzDnCn5x4HjeXn7TrKD4jdQ8k/68PuZRO3UZzfkbCmdB4iu6hJ7Dcjr0zwp+Xdj2GN1mmK1IymnOVLyg+u4m6pYjSPrx+dHyVoNftjXs8DWIQlZnxsliwunSecFLgn+wuW8KJ2MdLK8cJSqhLgVaoo8upiULCeMJt4a726uWPEVs6EU12EZU0pUQox9OjOhFGjRt8KdJdnWP8WuzYHSLrG/mn8pz871vuV9nZIl2MoMouZNzzZeg5qC0utNujdnq3w5Q1UtkNWoF3stvkhpb9jeDBJUNWXKUadb/qUW5x/1qDtU7NsSWXnzlKjtK5RWW4+dQV/0SpIrK1vB+iYlLlTk2eVdepYKGEWrkgNOSenM6dHHqMP5iBeByyqaIJxpe4rn0bedo0Ws+z7j7izFq6YJ2EkmThkf8/cBWrRo0aJFixYtWrRo0aJFixYtWrRo0aJFixYtWvR/kJgf2tZ4H8qD7IM8o2/+b6bGDvu1m/3f5Mvf1BLr+yVTbCl/Xa+yD9ez4OWmKzW/v33K1frxdgbejr7WbV2MPkRHYIptU9FpO0URQeP9Hc/CgvLm45NY9EX6cbVyGu+pmST7QGAoxlgVSqpDM3nZWa043aUux1VLnB6iXUKit9XbylMhh9zq4YYklbtfMprw/rS5dy10Om7Pfr+Bnwtp/TfiWa348FiET4iKZjQfzQlaBMoi/jT+/FF+la5SbPJQspVzvRS7MeEWhPoOmIPiwl/KbTb+BRUIJqmylM4Ev8XhmuuOowllCnRcTgfdEQ7K8687b797Un2UfH3UOKgiZzNzzK6ckYlbFrGxpbnYpLZjpM7o5OLsUvhTfcem2DGyley6wHaT0qGbUmY3RXUlavaqkrfVGcxfp1Rzqj+11327SdWxxGW8RCPNSPZR9/FaV/GZUlHUE7vuTnhjv6bENyjtFQxKtKB2FugVpa4jnaXGeX1VO3qRFYNpUCrNbxwGmlXh7h3EJ+UlJamb0h2vLqHEV21K+xVXyiofDykFV62WLiJKh2N5OYog66DkNupiXO6HhJSs6va7/0QJnXvczFgjUxsUkV1aU24ntj9ROlcFQy32Y11CZhvqEyVOZkvBZN+HFFHaimpjkCv7mpVbXo6OM36OBkUpnhLY7MqUNpDS/fF2RAmGMBjFlfBkFt+HlDT4x4uqQVeGHdn2AyU/rB6lnD9QQnUJJay/pU+UhIb3UPR6voYopaBScQ2kJNSXp8UHmydvgCmM2nlKQX3PNik1soSXhSwoGUWNubF1VQoCSAkmRT7XYykfYVGyGgM+h0ep7BXOyhOlRu8LWpROTqWkk1L4aCWUCE991FUJ/pCoDUqrF5SudlWZzAKyk3JNSkKjxrKklMTjB0qoxVUHVa2YN5TUFqXmOR5MRSkoT423NdjHPvVLTNENnLKxUoZdCNugdK5vD5qUEqkYxvdeWZW28GTbklJCTMlPqkfBmO7d57pErWH7oA0Rl9K1kbHRqShZO6QYQtQf9z+KsL/J2zYVFtc4ak3Jf7xdRJTQ7x10moUDYBbb/pToW/UoWAYPoy6VOU4sHWBSitKaUp79AVKK29ku0yd3CZb2kGxse5PATrnIaQM/v7VvD7PvRZSooqHFm8Kqw5ZqU+IalNxXlOIWpV07EoLhOyjBr0irupS1d3jXXn9JiWlRUtZ1953PliAlp+1MBY/dklhgOMT7ONMNVpijVFEK2imF70xNqSi8Hxf2Zs5mm9KtfkLZJFERG1nGiopxYhAlve0PClJJaV9tpUU+PkPVlMqcx/tzk9JPPUSBoE3pofyo9xbbtcFpb1uX4AAkbFtBUjZf9d5q26/PfPOSUj1VyWoUVVFCnkDdF4MdorTx0Te0DLwD5HvbSntmE5a1jd4fHSFXefI7S11qSnzTey4pxfCGTCu4t/tW+ktCuk0rZZPAcoxjBKMQ4tDuvdXiS2522/+1+NoTkNu3MzWleqaXD4slJZSvfV/ZiW68UNAN8s9c8fHPMUZPQJQu6uWneFIC3aC89+70ylegSYlqTnBKSk8zyUAuO9pDQ7RWewLo7DPGQcVsCI0RRuapt2I09JoSj25ny9peUaLKkxzzqlRRYrpD93ZRdwJuPym92gsFT2Zb8wg09SIgKPOLm5SahzKVlM6PsTmZvXJHMO/1yV/iYbu3m16lCkuZNXwEg79AC9Unr9Js+d4FpXVtQk2J6s6slVe3TYedsVlTKsXcS0pd+XDyjPMtShSokFQt7uEQIg5UfuEHSsj3vjQolX5kY9FJctDt7ynBuQnkfip6RLmk5HZFqu/ya6T06fPce0eU6qMwG5Qovt1j3pJi7LPrCwrbqkdGFCxSsze2VnC+0XF4s44G4MYwGtKoHA9VyWoFraD1ATR2nOqqGDYpwSLBypTAP2jxee7kMM+pto/oqW47QjQuKjYaBOugELGaxy36rP8A8CoXbANIqu8AAAAASUVORK5CYII=",
+ width: "100", height: "", class: "") %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <p class="card-text">Running shoes</p>
-        <p class="card-text"><small class="text-muted">Starting at $100.000</small></p>
+        <p class="card-text">Under Armour</p>
+        <p class="card-text"><small class="text-muted">running shoes starting at $300.000</small></p>
+        <a href="https://www.underarmour.com/en-us/" class="card-text"><small class="text-muted">https://www.underarmour.com</small></a>
       </div>
     </div>
   </div>
 </div>
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3" style="max-width: 540px; margin: 50px">
   <div class="row no-gutters">
     <div class="col-md-4">
-<%= image_tag("athletics/nike_4.png", width: "100", height: "100", class: "card-img-top") %>
+<%= image_tag(src="data:image/png;base64,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",
+              width: "100", height: "", class: "") %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <p class="card-text">Hiking shoes</p>
-        <p class="card-text"><small class="text-muted">Starting at $200.000</small></p>
+        <p class="card-text">Adidas</p>
+        <p class="card-text"><small class="text-muted">running shoes starting at $280.000</small></p>
+        <a href="https://www.adidas.com/us" class="card-text"><small class="text-muted">https://www.adidas.com/</small></a>
       </div>
     </div>
   </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiNQLIk73786co8_ODNlSkHZBCngn-A5HqFzJOV41kGOAltA82&usqp=CAU",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Golty</p>
+        <p class="card-text"><small class="text-muted">Sports articles</small></p>
+        <a href="https://www.golty.com/" class="card-text"><small class="text-muted">https://www.golty.com/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3qS-63Z1L_Z10OdXwKRDReJPgum1iyDopINbtvd4rki6KLzK-&usqp=CAU",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Trek</p>
+        <p class="card-text"><small class="text-muted">Bike Store</small></p>
+        <a href="https://www.trekbikes.com/internationalspanish/es_IN_TL/?clear=true" class="card-text"><small class="text-muted">https://www.trekbikes.com/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpp5XhXQHsZBdjDbKyUB7Sa4xSD8Sz9aX5TJHC66Nfn2nxdFld&usqp=CAU",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Optimus</p>
+        <p class="card-text"><small class="text-muted">Bike Store</small></p>
+        <a href="https://www.optimusbikes.com/" class="card-text"><small class="text-muted">https://www.optimusbikes.com/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="https://http2.mlstatic.com/para-bicicleta-casco-D_NQ_NP_562911-MCO20672271096_042016-F.jpg",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Gw </p>
+        <p class="card-text"><small class="text-muted">Bike Store</small></p>
+        <a href="https://gwbicycles.com/" class="card-text"><small class="text-muted">https://gwbicycles.com/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="https://www.placedeville.com/app/uploads/sites/11/2018/04/Sports_Experts_Coul_Web.jpg",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Sport Experts </p>
+        <p class="card-text"><small class="text-muted">Sport Store</small></p>
+        <a href="https://www.sportsexperts.ca/" class="card-text"><small class="text-muted">https://www.sportsexperts.ca/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4" style="max-width: 540px; margin: 50px">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+<%= image_tag(src="data:image/png;base64,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",
+              width: "100", height: "", class: "") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text">Puma</p>
+        <p class="card-text"><small class="text-muted">Sport Store</small></p>
+        <a href="https://es-us.puma.com/" class="card-text"><small class="text-muted">https://www.puma.com/</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>

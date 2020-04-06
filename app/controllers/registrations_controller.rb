@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
     @event = Event.find(params[:event_id])
     @registration.user_id = current_user.id
-    @registration.event_id = params[:event_id]
+    @registration.event_id =  @event.id
     if @registration.save!
       redirect_to root_path
      flash[:notice] = "Your Registration is Completed"
@@ -20,8 +20,38 @@ class RegistrationsController < ApplicationController
      flash[:alert] = "Registration Failed"
     end
   end
+<<<<<<< HEAD
+  def edit
+    @event = Event.find(params[:event_id])
+    @registration = Registration.find(params[:id])
+    if current_user != @registration.user
+      sign_out current_user
+      redirect_to root_path
+      flash[:notice] = "Unauthorized Request"
+    end
+  end
+  def update
+    @event = Event.find(params[:event_id])
+    @registration = Registration.find(params[:id])
+    @registration.update(registration_params)
+    if current_user == @registration.user
+        @registration.update(registration_params)
+        redirect_to "/events/#{@registration.id}/edit"
+        flash[:notice] = "Event Succesfully Updated"
+      else
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "Not authorized to edit this registration"
+      end
+  end
+  def unregister
+    @registration = Registration.find(params[:registration_id])
+    @registration.destroy
+    redirect_to "/my_events/"
+    flash[:notice] = "Event Succesfully Updated"
+=======
   def show
     @registration = Registration.find(params[:id])
+>>>>>>> master
   end
 
   private
