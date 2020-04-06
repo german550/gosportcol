@@ -60,6 +60,7 @@
                 <div class="col-2 themed-grid-col text-center "><%= " #{e.time.strftime("%H:%M %p")}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{e.registrations.where(registered: true).count}"  %> </div>
                 <div class="col-2 themed-grid-col text-center ">
+                
                     <div class = "container-edit">
                     <%= button_to "Edit", "/events/#{e.id}/edit", method: :get, class: "btn btn-info btn-block btn-sm mb-2" %>
                     <%= button_to "Delete", "/events/#{e.id}" , class: "btn btn-info btn-block btn-sm ml-1 mb-2", method: :delete, data:{confirm: "Are you sure?"}%> 
