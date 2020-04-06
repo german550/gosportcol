@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :my_events
   resources :about
   resources :events do
-    resources :registrations
+    resources :registrations do
+      put "unregister"
+    end
   end
 end

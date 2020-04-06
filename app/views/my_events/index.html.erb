@@ -23,7 +23,7 @@
 
                 <% @myregistrations.each do |r| %>
                     <%if @myregistrations != [] %>
-                <div class="col-2 themed-grid-col text-center align-bottom"><%= " #{r.event.place}" %> </div>
+                <div class="col-2 themed-grid-col text-center"><%= " #{r.event.place}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.description}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.date}" %> </div>
                 <div class="col-2 themed-grid-col text-center "><%= " #{r.event.time.strftime("%H:%M %p")}" %> </div>
