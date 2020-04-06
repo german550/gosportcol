@@ -20,6 +20,7 @@ class RegistrationsController < ApplicationController
      flash[:alert] = "Registration Failed"
     end
   end
+<<<<<<< HEAD
   def edit
     @event = Event.find(params[:event_id])
     @registration = Registration.find(params[:id])
@@ -47,6 +48,10 @@ class RegistrationsController < ApplicationController
     @registration.destroy
     redirect_to "/my_events/"
     flash[:notice] = "Event Succesfully Updated"
+=======
+  def show
+    @registration = Registration.find(params[:id])
+>>>>>>> master
   end
 
   private
