@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
     @event = Event.find(params[:event_id])
     @registration.user_id = current_user.id
-    @registration.event_id =  @event.id
+    @registration.event_id = @event.id
     if @registration.save!
       redirect_to root_path
      flash[:notice] = "Your Registration is Completed"
@@ -47,6 +47,11 @@ class RegistrationsController < ApplicationController
     @registration.destroy
     redirect_to "/my_events/"
     flash[:notice] = "Event Succesfully Updated"
+<<<<<<< HEAD
+  end
+=======
+>>>>>>> d1c4f0493ef854e8dc441b22806a3f7824775e8c
+
 
   private
   def registration_params

@@ -8,3 +8,5 @@ class MyEventsController < ApplicationController
     def myregistrations_params
         params.require(:registration).permit(:registered)
       end
+
+end
