@@ -47,7 +47,10 @@ class RegistrationsController < ApplicationController
     @registration.destroy
     redirect_to "/my_events/"
     flash[:notice] = "Event Succesfully Updated"
+<<<<<<< HEAD
   end
+=======
+>>>>>>> d1c4f0493ef854e8dc441b22806a3f7824775e8c
 
 
   private
